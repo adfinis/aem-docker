@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: dispatcher
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: dispatcher
+    spec:
+      containers:
+      - image: 192.168.0.152:5000/aem-dispatcher:latest
+        imagePullPolicy: Always
+        name: dispatcher
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources: {}
+      restartPolicy: Always
+status: {}
