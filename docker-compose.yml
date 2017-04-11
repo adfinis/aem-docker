@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  publisher:
+    image: aem-publisher
+    ports:
+     - "4503:4503"
+  author:
+    image: aem-author
+    links:
+     - publisher
+    ports:
+     - "4502:4502"
+  dispatcher:
+    image: aem-dispatcher
+    links:
+      - publisher
+    ports:
+      - "80:80"
+      - "443:443"
