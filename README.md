@@ -1,5 +1,5 @@
 # aem-docker
-Docker Image for Adobe Enterprise Manager
+Docker Images for Adobe Experience Manager
 
 ## aem-base
 Step 1. Build the aem-base image
