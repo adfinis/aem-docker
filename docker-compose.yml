@@ -2,11 +2,17 @@ version: "2"
 
 services:
   publisher:
-    image: aem-publisher
+    build:
+      context: ./
+      dockerfile: publisher.dockerfile
+    image: aem-publisher:latest
     ports:
      - "4503:4503"
   author:
-    image: aem-author
+    build:
+      context: ./
+      dockerfile: author.dockerfile
+    image: aem-author:latest
     links:
      - publisher
     ports:
