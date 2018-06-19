@@ -1,6 +1,11 @@
 # aem-docker
 Docker Images for Adobe Experience Manager
 
+AEM_6.X_Quickstart.jar & license.properties required in the project root
+
+update the VER arg in author.dockerfile and publisher.dockerfile for your version of the AEM_6.X_Quickstart.jar
+
+
 ## aem-base
 Step 1. Build the aem-base image
 
@@ -17,8 +22,17 @@ cd aem-dispatcher
 docker build -t aem-base .
 ```
 
+## volumes
+TODO:
+https://github.com/alan-mushi/AEM-for-Docker/blob/master/docker-compose.yml
+
+https://www.linkedin.com/pulse/running-aem-docker-satendra-singh/
+
+
 ## docker-compose
-Step 3. Run docker-compose
+Use docker-compose to create the author and publisher images if they do not already exist and implement the containers.
+
+
 ```bash
 docker-compose up -d
 ```
@@ -33,3 +47,6 @@ CMD (as administrator)
 ```
 net stop was
 ```
+
+## volumes
+
