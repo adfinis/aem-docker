@@ -23,15 +23,13 @@ docker build -t aem-base .
 ```
 
 ## volumes
-TODO:
-https://github.com/alan-mushi/AEM-for-Docker/blob/master/docker-compose.yml
-
+TODO: Create Volumes to persist AEM Data
 https://www.linkedin.com/pulse/running-aem-docker-satendra-singh/
 
 
 ## docker-compose
-Use docker-compose to create the author and publisher images if they do not already exist and implement the containers.
 
+Use docker-compose to create the author and publisher images if they do not already exist and implement the containers.
 
 ```bash
 docker-compose up -d
@@ -48,5 +46,4 @@ CMD (as administrator)
 net stop was
 ```
 
-## volumes
-
+Use `docker stop` [CONTAINER ID] instead of `docker-compose down` if you do not want to lose any changes made. `docker start` [CONTAINER ID] to continue where you left off.
