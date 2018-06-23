@@ -3,16 +3,20 @@ version: "3"
 services:
   publisher:
     build:
+      args:
+        version: $VERSION
       context: ./
       dockerfile: publisher.dockerfile
-    image: aem-publisher:latest
+    image: aem-publisher:$VERSION
     ports:
      - "4503:4503"
   author:
     build:
+      args:
+        version: $VERSION
       context: ./
       dockerfile: author.dockerfile
-    image: aem-author:latest
+    image: aem-author:$VERSION
     links:
      - publisher
     ports:
