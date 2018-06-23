@@ -3,7 +3,7 @@ Docker Images for Adobe Experience Manager
 
 AEM_6.X_Quickstart.jar & license.properties required in the project root
 
-Update the VERSION environment variable in .env for your version of the AEM_6.X_Quickstart.jar
+Update the VERSION environment variable in the `.env` file for your version of the AEM_6.X_Quickstart.jar
 for example:
 ```
 VERSION=6.3
@@ -70,12 +70,12 @@ pwd
 
 **Step 2** - After getting the segmentstore path, we can now stop the running aem containers or use `docker-compose down` to remove them since a new `aem_author_instance` container will be created in step 4 below.
 
-**Step 3** - Create the volume from the `aem-author:6.3` image using the segmentstore path. e.g.,
+**Step 3** - Create the volume from the `aem-author:6.3` image using the segmentstore path along with an `aem_repo` data container. e.g.,
 ```bash
 docker create -v /aem/crx-quickstart/repository/segmentstore --name aem_arepo aem-author:6.3 /bin/true
 ```
 
-**Step 4** - Create a new `aem_author_instance` container using the `--volumes-from` option to mount the repository volume from the aem_repo data container
+**Step 4** - Create a new `aem_author_instance` container using the `--volumes-from` option to mount the repository volume from the `aem_repo` data container
 ```bash
 docker run -d --name=aem_author_instance --volumes-from aem_arepo -p 4502-4503:4502-4503 aem-author:6.3
 ```
