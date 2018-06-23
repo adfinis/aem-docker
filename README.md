@@ -47,3 +47,12 @@ net stop was
 ```
 
 Use `docker stop` [CONTAINER ID] instead of `docker-compose down` if you do not want to lose any changes made. `docker start` [CONTAINER ID] to continue where you left off.
+
+
+> Create a new image from a container’s changes
+
+For example, after installing a service pack from Adobe to upgrade AEM
+
+```
+docker commit [CONTAINER ID] aem-author:6.3.2
+```
