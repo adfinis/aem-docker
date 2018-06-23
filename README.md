@@ -49,7 +49,7 @@ Use `docker stop` [CONTAINER ID] instead of `docker-compose down` if you do not 
 ## repository persistence
 
 Assuming that the aem images containers are up and running via `docker-compose up -d` from the previous section,
-use a Docker data only container, were we create a volume from the aem-author image. In this example, the aem author image is `aem-author:6.3`.
+use a Docker data only container, where we create a volume from the aem-author image. In this example, the aem author image is `aem-author:6.3`.
 
 **Step 1** - Needed is the the repository segmentstore path, e.g.,
 `/aem/crx-quickstart/repository/segmentstore`
