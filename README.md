@@ -3,6 +3,8 @@ Docker Images for Adobe Experience Manager
 
 AEM_6.X_Quickstart.jar & license.properties required in the project root
 
+[AEM Request Page](https://solutionpartners.adobe.com/home/enablement/access/mc-products.html)
+
 Update the VERSION environment variable in the `.env` file for your version of the AEM_6.X_Quickstart.jar
 for example:
 ```
