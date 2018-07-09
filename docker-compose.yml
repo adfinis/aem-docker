@@ -1,12 +1,22 @@
-version: "2"
+version: "3"
 
 services:
   publisher:
-    image: aem-publisher
+    build:
+      args:
+        version: $VERSION
+      context: ./
+      dockerfile: publisher.dockerfile
+    image: aem-publisher:$VERSION
     ports:
      - "4503:4503"
   author:
-    image: aem-author
+    build:
+      args:
+        version: $VERSION
+      context: ./
+      dockerfile: author.dockerfile
+    image: aem-author:$VERSION
     links:
      - publisher
     ports:
