@@ -20,11 +20,11 @@ docker build -t aem-base .
 ```
 
 ## aem-dispatcher
-**Step 2** - Build the aem-base image
+**Step 2** - Build the aem-dispatcher image
 
 ```bash
 cd aem-dispatcher
-docker build -t aem-base .
+docker build -t aem-dispatcher .
 ```
 
 ## docker-compose
